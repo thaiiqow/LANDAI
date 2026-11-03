@@ -30,8 +30,8 @@ function langBody(){
   return `<div class="al">${A.map((l,i)=>`<button data-li="${i}" class="${i==lsel?'on':''}">${l[0]}${l[1]}</button>`).join('')}</div>
   <div class="card" style="margin-top:1rem"><div class="gl">${a[0]} ${a[1]}</div><table>
   <tr><th>${x('upper')}</th><td>${a[0]}</td><th>${x('lower')}</th><td>${a[1]}</td></tr>
-  <tr><th>${x('name')}</th><td colspan=3>${ts('unk')}</td></tr><tr><th>${x('snd')}</th><td colspan=3>${a[2]}</td></tr>
-  <tr><th>${x('desc')}</th><td colspan=3>${ts('unk')}</td></tr><tr><th>${x('word')}</th><td colspan=3>${ts('unk')}</td></tr></table>
+<tr><th>${x('name')}</th><td colspan=3>${a[3]||ts('unk')}</td></tr>
+<tr><th>${x('desc')}</th><td colspan=3>${ts('unk')}</td></tr><tr><th>${x('word')}</th><td colspan=3>${ts('unk')}</td></tr></table>
   <p><label>${x('notes')}<br><textarea id="nt" rows=3 style="width:100%">${nt}</textarea></label></p></div>`}
  if(lsec=='tn'){const b=A[tbase];
   const rows=DATA.tones.map(t=>`<tr><td class="gl">${b[0]+t[0]}</td><td class="gl">${b[1]+t[0]}</td><td>${ts('unk')}</td><td>${ts('unk')}</td></tr>`).join('');
